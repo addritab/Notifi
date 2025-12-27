@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="pomodoro.css" />
+  <link href="https://fonts.googleapis.com/css?family=Itim&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="content-wrapper">
+    <div class="side-bar"></div>
+    <img src="penguin.png" class="penguin" alt="Penguin" />
+
+    <div class="content-section">
+      <nav class="tabs">
+        <a href="checklist.html" class="tab">Checklist</a>
+        <a href="lofi.html" class="tab">Lofi</a>
+        <a href="pomodoro.html" class="tab">Pomodoro</a>
+      </nav>
+
+      <div class="top-plus">
+        <img src="plus.png" alt="Add" class="plus-sign" />
+        <div class="round-label">Round 1</div>
+      </div>
+
+      <div class="pomodoro-section">
+        <div class="timer-display" id="timer">25 : 00</div>
+        <hr class="timer-divider" />
+        <div class="timer-controls">
+          <button id="start">Start</button>
+          <button id="stop">Stop</button>
+          <button id="reset">Reset</button>
+        </div>
+      </div>
+
+      <div class="bot-plus">
+        <img src="plus.png" alt="Add" class="bot-plus-img" />
+      </div>
+    </div>
+  </div>
+
+  <script src="pomodoro.js"></script>
+</body>
+</html>

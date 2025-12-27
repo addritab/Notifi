@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notifi</title>
+
+  <link rel="stylesheet" href="checklist.css" />
+  <link href="https://fonts.googleapis.com/css?family=Itim&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="content-wrapper">
+    <div class="side-bar"></div>
+
+    <img src="penguin.png" class="penguin" alt="Penguin" />
+
+    <main class="content-section">
+      <nav class="tabs">
+        <a href="checklist.html" class="tab active">Checklist</a>
+        <a href="lofi.html" class="tab">Lofi</a>
+        <a href="pomodoro.html" class="tab">Pomodoro</a>
+      </nav>
+
+      <div class="input-row">
+        <button id="add-task-btn" class="plus-sign" aria-label="Add Task">
+          <img src="plus.png" alt="Add" />
+        </button>
+
+        <input
+          type="text"
+          id="input-task"
+          class="input-task"
+          placeholder="What are you going to do today?"
+        />
+      </div>
+
+      <ul class="tasks" id="task-list"></ul>
+    </main>
+  </div>
+
+  <script src="checklist.js"></script>
+</body>
+</html>

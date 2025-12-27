@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lofi</title>
+    <link rel="stylesheet" href="lofi.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Itim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <div class="side-bar"></div>
+        <img src="penguin.png" class="penguin" alt="Penguin"/>
+
+        <div class="content-section">
+            <nav class="tabs">
+                <a href="checklist.html" class="tab">Checklist</a>
+                <a href="lofi.html" class="tab">Lofi</a>
+                <a href="pomodoro.html" class="tab">Pomodoro</a>
+            </nav>
+            <div class="top-plus">
+                <img src="plus.png" alt="Add" class="plus-sign" />
+            </div>
+            
+            <div>
+                <div class="lofi-main">
+                    <div class="lofi-label">Listen to some tunes!</div>
+                    <div class="lofi-player">
+                        <div class="lofi-art">
+                            <img src="play.png" alt="Play" class="play-pause-btn" id="playPauseBtn" />
+                        </div>
+
+                        <div class="lofi-controls">
+                            <div class="lofi-title" id="songTitle"></div>
+                            <div class="lofi-timeline">
+                                <span id="currentTime"></span>
+                                <input type="range" id="progressBar" min="0" value="0" step="1" />
+                                <span id="duration"></span>
+                            </div>
+
+                            <div class="lofi-buttons">
+                                <button id="backbtn" class="icon-btn" aria-label="Previous">
+                                    <img src="backbtn.png" alt="Previous" />
+                                </button>
+                                <img src="soundbtn.png" alt="Volume" class="volume-icon" />
+                                <input type="range" id="volumeBar" min="0" max="1" step="0.01" value="1" class="volume-bar" />
+                                <button id="nextbtn" class="icon-btn" aria-label="Next">
+                                    <img src="nextbtn.png" alt="Next" />
+                                </button>
+                            </div>
+                        </div>
+
+                        <audio id="audio" preload="metadata"></audio>
+                    </div>
+
+                    <div class="lofi-underline"></div>
+                </div>
+
+                <div class="bot-plus">
+                    <img src="plus.png" alt="Add" class="bot-plus" />
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="lofi.js"></script>
+</body>
+</html>

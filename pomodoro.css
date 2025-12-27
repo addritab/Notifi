@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.4s;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* layout */
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+/* sidebar */
+
+.side-bar {
+  width: clamp(300px, 30vw, 550px);
+  height: 100vh;
+  background: black;
+  flex-shrink: 0;
+}
+
+/* penguin */
+
+.penguin {
+  width: 190px;
+  height: 190px;
+  margin-left: 14rem;  /* farther from sidebar */
+  margin-right: 4rem;  /* closer to tabs/content */
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* content */
+
+.content-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  min-width: 0;
+
+  /* keeps top UI stable while timer content grows */
+  height: 70vh;
+}
+
+/* tabs (match checklist positioning style) */
+
+.tabs {
+  display: flex;
+  gap: clamp(30px, 6vw, 95px);
+  margin-bottom: 20px;
+  margin-top: 265px;
+  margin-left: 47.8px;
+}
+
+
+.tab {
+  font-family: 'Itim', cursive;
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.tab::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: #111;
+  transition: width 0.2s ease;
+  border-radius: 100px;
+}
+
+.tab:hover::after {
+  width: 100%;
+}
+/* top label */
+
+.top-plus {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 47.6px;
+}
+
+.plus-sign {
+  background: none;
+  border: none;
+  width: 17px;
+  height: 18px;
+}
+
+.round-label {
+  font-family: 'ABeeZee', sans-serif;
+  font-size: 16px;
+  color: #7B7B7B;
+}
+
+/* pomodoro */
+
+.pomodoro-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 520px;
+}
+
+.timer-display {
+  font-family: 'Itim', cursive;
+  font-size: clamp(64px, 6vw, 90px);
+  background: #111;
+  color: #fff;
+  padding: clamp(14px, 2vw, 20px) clamp(38px, 5vw, 70px);
+  border-radius: 16px;
+  margin-bottom: 5px;
+  margin-left: 45px;
+  letter-spacing: 2px;
+
+  width: clamp(340px, 28vw, 460px);
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+  font-variant-numeric: tabular-nums;
+}
+
+
+.timer-divider {
+  border: none;
+  border-top: 2px solid #111;
+  width: clamp(340px, 28vw, 460px);
+  margin: 16px 0 16px 45px;
+}
+
+
+.timer-controls {
+  display: flex;
+  justify-content: space-between;  /* even spacing */
+  align-items: center;
+
+  width: clamp(340px, 28vw, 460px); /* same as timer/divider */
+  margin-left: 45px;               /* same left alignment */
+}
+
+
+
+.timer-controls button {
+  font-family: 'Itim', cursive;
+  font-size: 22px;
+  padding: 4px 25px;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  border-width: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.timer-controls button:hover {
+  background: #f0f0f0;
+}
+
+/* bottom plus (kept, but stable) */
+
+.bot-plus {
+  margin-top: 10px;
+  margin-left: 500px;
+  width: 10px;
+  height: 12px;
+}
+
+/* mode colors */
+
+.break-label {
+  color: #000000 !important;
+}
+.long-break-label {
+  color: #000000 !important;
+}
+.timer-display.break-mode {
+  background: #4d754d;
+  color: #fff;
+}
+.timer-display.long-break-mode {
+  background: #546d8b;
+  color: #fff;
+}
+
